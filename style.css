@@ -94,3 +94,19 @@ h2 {
 .card a:hover {
   text-decoration: underline;
 }
+.resume-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: white;
+  color: black;
+}
