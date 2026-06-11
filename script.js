@@ -1,72 +1,81 @@
-console.log("JavaScript is working!");
-console.log("Portfolio loaded 🚀");
-const sections = document.querySelectorAll(".section");
+document.addEventListener("DOMContentLoaded", () => {
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.15
-});
+  console.log("Portfolio loaded 🚀");
 
-sections.forEach(section => {
-  observer.observe(section);
-});
+  // =========================
+  // FADE-IN ANIMATION
+  // =========================
+  const sections = document.querySelectorAll(".section");
 
-//toggling 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
 
-const toggle = document.getElementById("themeToggle");
+  sections.forEach(section => observer.observe(section));
 
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("light")) {
-    toggle.textContent = "🌙";
-  } else {
-    toggle.textContent = "☀️";
+  // =========================
+  // THEME TOGGLE
+  // =========================
+  const toggle = document.getElementById("themeToggle");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+
+      toggle.textContent =
+        document.body.classList.contains("light") ? "🌙" : "☀️";
+    });
   }
-});
 
-//
-const text = "Data Analyst • Power BI • SQL • Data Storytelling";
-let i = 0;
 
-function typeEffect() {
-  const el = document.querySelector(".subtitle");
-  if (!el) return;
+  // =========================
+  // TYPE EFFECT
+  // =========================
+  const text = "Data Analyst • Power BI • SQL • Data Storytelling";
+  let i = 0;
 
-  el.textContent = text.slice(0, i);
-  i++;
+  function typeEffect() {
+    const el = document.querySelector(".subtitle");
+    if (!el) return;
 
-  if (i <= text.length) {
-    setTimeout(typeEffect, 60);
+    el.textContent = text.slice(0, i);
+    i++;
+
+    if (i <= text.length) {
+      setTimeout(typeEffect, 50);
+    }
   }
-}
 
-window.addEventListener("load", typeEffect);
+  typeEffect();
 
-//
 
-const navLinks = document.querySelectorAll(".navbar a");
-const sections = document.querySelectorAll(".section");
+  // =========================
+  // ACTIVE NAV
+  // =========================
+  const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", () => {
-  let current = "";
+  window.addEventListener("scroll", () => {
+    let current = "";
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
   });
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
 });
