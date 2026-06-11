@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // FADE-IN ANIMATION
   // =========================
+document.addEventListener("DOMContentLoaded", () => {
+
+  // fade-in sections 
   const sections = document.querySelectorAll(".section");
 
   const observer = new IntersectionObserver(entries => {
@@ -15,22 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.15 });
 
-  sections.forEach(section => observer.observe(section));
+  sections.forEach(sec => observer.observe(sec));
+
+});
 
 
   // =========================
-  // THEME TOGGLE
-  // =========================
-  const toggle = document.getElementById("themeToggle");
-
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("light");
-
-      toggle.textContent =
-        document.body.classList.contains("light") ? "🌙" : "☀️";
-    });
-  }
+  
 
 
   // =========================
