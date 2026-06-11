@@ -3,11 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Portfolio loaded 🚀");
 
   // =========================
-  // FADE-IN ANIMATION
+  // FADE-IN SECTIONS
   // =========================
-document.addEventListener("DOMContentLoaded", () => {
-
-  // fade-in sections 
   const sections = document.querySelectorAll(".section");
 
   const observer = new IntersectionObserver(entries => {
@@ -20,15 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach(sec => observer.observe(sec));
 
-});
-
 
   // =========================
-  
-
-
-  // =========================
-  // TYPE EFFECT
+  // TYPE EFFECT (Hero subtitle)
   // =========================
   const text = "Data Analyst • Power BI • SQL • Data Storytelling";
   let i = 0;
@@ -49,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // =========================
-  // ACTIVE NAV
+  // ACTIVE NAV SCROLL
   // =========================
   const navLinks = document.querySelectorAll(".navbar a");
 
@@ -58,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
+
       if (pageYOffset >= sectionTop - 200) {
         current = section.getAttribute("id");
       }
