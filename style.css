@@ -110,3 +110,22 @@ h2 {
   background: white;
   color: black;
 }
+
+/* smooth transition */
+
+.section {
+  padding: 120px 20px;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: auto;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+/* when visible */
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
