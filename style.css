@@ -129,3 +129,21 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.light .navbar a {
+  color: #0f172a;
+}
+
+body.light .card {
+  background: #e2e8f0;
+  color: #0f172a;
+}
