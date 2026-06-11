@@ -16,6 +16,8 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
+//toggling 
+
 const toggle = document.getElementById("themeToggle");
 
 toggle.addEventListener("click", () => {
@@ -27,3 +29,21 @@ toggle.addEventListener("click", () => {
     toggle.textContent = "☀️";
   }
 });
+
+
+const text = "Data Analyst • Power BI • SQL • Data Storytelling";
+let i = 0;
+
+function typeEffect() {
+  const el = document.querySelector(".subtitle");
+  if (!el) return;
+
+  el.textContent = text.slice(0, i);
+  i++;
+
+  if (i <= text.length) {
+    setTimeout(typeEffect, 60);
+  }
+}
+
+window.addEventListener("load", typeEffect);
