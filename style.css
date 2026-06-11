@@ -188,3 +188,9 @@ h2 {
   background: #38bdf8;
   color: black;
 }
+
+.navbar a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 4px;
+}
