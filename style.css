@@ -508,3 +508,90 @@ transform: translateY(-4px);
   font-size: 14px;
   color: #cbd5e1;
 }
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 42px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+
+  .section {
+    padding: 80px 16px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .project-card {
+    padding: 14px;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card ul {
+    font-size: 14px;
+  }
+
+  .tags span {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 12px;
+  }
+
+  .skill-card img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skill-card p {
+    font-size: 12px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    gap: 12px;
+    padding: 12px 8px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-links a {
+    width: 80%;
+    text-align: center;
+  }
+
+}
