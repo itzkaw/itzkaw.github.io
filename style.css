@@ -5,29 +5,6 @@ body {
   scroll-behavior: smooth;
   background: radial-gradient(circle at top, #111827, #0b0f19 60%);
 }
-body::before {
-  content: "";
-  position: fixed;
-  top: -200px;
-  left: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(56,189,248,0.08), transparent 60%);
-  z-index: -1;
-  filter: blur(40px);
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  bottom: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(167,139,250,0.07), transparent 60%);
-  z-index: -1;
-  filter: blur(50px);
-}
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -47,6 +24,7 @@ body::after {
   color: #cbd5e1;
   text-decoration: none;
   font-size: 14px;
+  transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -57,9 +35,9 @@ body::after {
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;   /* THIS is what centers everything */
+  align-items: center;
   text-align: center;
+  padding: 100px 20px;
 }
 
 /* HERO */
@@ -73,6 +51,7 @@ body::after {
 
 .hero-visual img {
   width: 100%;
+  max-width: 420px;
   border-radius: 18px;
 }
 .typing-text {
@@ -100,11 +79,6 @@ body::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.name {
-  font-size: 70px;
-  margin: 0;
-  color: #38bdf8;
-}
 
 .desc {
   color: #94a3b8;
@@ -129,54 +103,90 @@ body::after {
 
 /* SKILLS */
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+
 .skill-card {
-  padding: 18px;
   background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
+  padding: 16px;
   text-align: center;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.skill-card img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 /* PROJECTS */
+
+..projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
 
 .project-card {
   background: rgba(255,255,255,0.03);
   padding: 16px;
   border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(56, 189, 248, 0.12);
 }
 
 .project-card img {
   width: 100%;
   border-radius: 12px;
 }
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: #38bdf8;
-  box-shadow: 0 18px 45px rgba(56, 189, 248, 0.12);
-}
 
 /* EXPERIENCE */
 
-.exp-card {
-  padding: 20px;
-  background: rgba(255,255,255,0.03);
-  border-radius: 14px;
-}
 #about h3 {
   margin-top: 40px;
   color: #38bdf8;
 }
 
+..experience-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
 .exp-card {
+  flex: 1;
+  min-width: 250px;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   padding: 20px;
   text-align: center;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .exp-card:hover {
@@ -196,11 +206,30 @@ body::after {
 }
 /* CONTACT */
 .contact-links {
+  margin-top: 25px;
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #e5e7eb;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  border-color: #38bdf8;
+  transform: translateY(-3px);
+}
 .journey-card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
@@ -281,31 +310,7 @@ body::after {
   color: #cbd5e1;
 }
 
-/* SKILLS GRID FIX */
-.skills-grid,
-.projects-grid,
-.journey-grid,
-.experience-grid {
-  width: 100%;
-  max-width: 1000px;
-  margin: 30px auto 0 auto;
-}
 
-.skill-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 16px;
-  text-align: center;
-}
-
-.skill-card img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 10px;
-}
 .skill-card p {
   font-size: 13px;
   margin: 0;
