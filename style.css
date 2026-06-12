@@ -128,12 +128,6 @@ body::after {
 }
 
 /* SKILLS */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  width: 100%;
-}
 
 .skill-card {
   padding: 18px;
@@ -143,12 +137,6 @@ body::after {
 }
 
 /* PROJECTS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  width: 100%;
-}
 
 .project-card {
   background: rgba(255,255,255,0.03);
@@ -171,12 +159,6 @@ body::after {
 }
 
 /* EXPERIENCE */
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
-}
 
 .exp-card {
   padding: 20px;
@@ -186,14 +168,6 @@ body::after {
 #about h3 {
   margin-top: 40px;
   color: #38bdf8;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
-  margin-top: 25px;
 }
 
 .exp-card {
@@ -225,13 +199,6 @@ body::after {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-}
-.journey-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  width: 100%;
-  margin-top: 30px;
 }
 
 .journey-card {
@@ -315,13 +282,13 @@ body::after {
 }
 
 /* SKILLS GRID FIX */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 18px;
+.skills-grid,
+.projects-grid,
+.journey-grid,
+.experience-grid {
   width: 100%;
-  margin-top: 30px;
-  padding: 0 10px;
+  max-width: 1000px;
+  margin: 30px auto 0 auto;
 }
 
 .skill-card {
