@@ -361,3 +361,31 @@ transform: translateY(-4px);
     text-align: center;
   }
 }
+.experience-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.exp-card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.exp-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
