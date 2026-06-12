@@ -230,6 +230,16 @@ body {
   border-color: #38bdf8;
   transform: translateY(-3px);
 }
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 30px auto 0;
+}
 .journey-card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
@@ -253,17 +263,22 @@ body {
 
 .journey-media {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
+
   border-radius: 12px;
   margin: 10px 0;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,.1);
 }
 
 .journey-card img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
+
   border-radius: 12px;
   margin: 10px 0;
-  border: 1px solid rgba(255,255,255,0.1);
-  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.1);
 }
 
 .journey-card p {
