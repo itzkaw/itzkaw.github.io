@@ -250,3 +250,24 @@ h1, h2, h3 {
 p {
   line-height: 1.6;
 }
+.socials {
+  margin-top: 25px;
+
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  font-size: 30px;
+}
+
+.socials a {
+  color: #94a3b8;
+
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #38bdf8;
+
+  transform: translateY(-4px);
+}
