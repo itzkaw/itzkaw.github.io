@@ -293,3 +293,42 @@ p {
 
   font-size: 14px;
 }
+.contact-links {
+
+margin-top: 30px;
+
+display: flex;
+
+gap: 20px;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+}
+
+.contact-links a {
+
+padding: 12px 18px;
+
+border-radius: 10px;
+
+text-decoration: none;
+
+color: #e5e7eb;
+
+background: rgba(255,255,255,.04);
+
+border: 1px solid rgba(255,255,255,.08);
+
+transition: .3s;
+
+}
+
+.contact-links a:hover {
+
+border-color: #38bdf8;
+
+transform: translateY(-4px);
+
+}
