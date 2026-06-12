@@ -21,22 +21,47 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // TYPE EFFECT (Hero subtitle)
   // =========================
-  const text = "Data Analyst • Power BI • SQL • Data Storytelling";
-  let i = 0;
+  const roles = [
+  "Aspiring Data Analyst",
+  "Power BI Developer",
+  "SQL Enthusiast",
+  "Data Storyteller"
+];
 
-  function typeEffect() {
-    const el = document.querySelector(".subtitle");
-    if (!el) return;
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-    el.textContent = text.slice(0, i);
-    i++;
+const typingElement = document.querySelector(".typing-text");
 
-    if (i <= text.length) {
-      setTimeout(typeEffect, 50);
-    }
+function typeRoles() {
+  const currentRole = roles[roleIndex];
+
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
   }
 
-  typeEffect();
+  typingElement.textContent = currentRole.substring(0, charIndex);
+
+  let speed = isDeleting ? 50 : 90;
+
+  if (!isDeleting && charIndex === currentRole.length) {
+    speed = 1500;
+    isDeleting = true;
+  }
+
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    speed = 400;
+  }
+
+  setTimeout(typeRoles, speed);
+}
+
+typeRoles();
 
 
   // =========================
