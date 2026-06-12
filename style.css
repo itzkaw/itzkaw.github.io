@@ -55,9 +55,11 @@ body::after {
 
 /* SECTIONS */
 .section {
-  min-height: 100vh;
-  padding: 100px 20px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* THIS is what centers everything */
+  text-align: center;
 }
 
 /* HERO */
