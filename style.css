@@ -230,6 +230,54 @@ body::after {
   gap: 20px;
   flex-wrap: wrap;
 }
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.journey-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: left;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.journey-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.journey-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.journey-media {
+  width: 100%;
+  border-radius: 12px;
+  margin: 10px 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.journey-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 10px 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.journey-card p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.5;
+}
 /* ===== FIX ALIGNMENT + UI RESTORE PATCH ===== */
 
 /* HERO SOCIAL ICONS */
