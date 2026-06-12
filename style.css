@@ -55,15 +55,9 @@ body::after {
 
 /* SECTIONS */
 .section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 100px 20px;
-  max-width: 1000px;
-  margin: auto;
+  min-height: auto;        /* IMPORTANT: remove forced full screen height */
+  padding: 70px 20px;      
+  margin: 0 auto;
 }
 
 /* HERO */
