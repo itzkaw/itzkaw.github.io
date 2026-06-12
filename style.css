@@ -218,6 +218,12 @@ body::after {
   width: 60px;
   margin-bottom: 10px;
 }
+.exp-video {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
 /* CONTACT */
 .contact-links {
   display: flex;
