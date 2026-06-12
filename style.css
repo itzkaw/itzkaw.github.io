@@ -280,3 +280,22 @@ body {
   max-width: 420px;
   border-radius: 18px;
 }
+#resume {
+  text-align: center;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: white;
+}
