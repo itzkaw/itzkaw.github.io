@@ -135,7 +135,7 @@ body {
 
 /* PROJECTS */
 
-..projects-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
@@ -168,7 +168,7 @@ body {
   color: #38bdf8;
 }
 
-..experience-grid {
+.experience-grid {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
