@@ -204,32 +204,6 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.1);
 }
-/* CONTACT */
-.contact-links {
-  margin-top: 25px;
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.contact-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #e5e7eb;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: 0.3s;
-}
-
-.contact-links a:hover {
-  border-color: #38bdf8;
-  transform: translateY(-3px);
-}
 .journey-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -332,7 +306,7 @@ body {
   color: #cbd5e1;
 }
 
-/* CONTACT FIX */
+/* CONTACT */
 .contact-links {
   margin-top: 25px;
   display: flex;
@@ -398,3 +372,9 @@ body {
   display: block;
 }
 
+.about-text {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+  text-align: center;
+}
