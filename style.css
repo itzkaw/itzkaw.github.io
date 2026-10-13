@@ -384,3 +384,17 @@ body {
 .resume-btn:hover {
   background: white;
 }
+
+/* ABOUT ME PROFILE PHOTO */
+.about-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid rgba(56, 189, 248, 0.7);
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.12);
+  margin: 0 auto 20px;
+  display: block;
+}
+
